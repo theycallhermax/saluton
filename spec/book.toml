@@ -9,4 +9,4 @@ multilingual = false
 edition = "2021"
 
 [output.html]
-site-url = "/saluton/spec/"
+site-url = "/saluton/book/"
