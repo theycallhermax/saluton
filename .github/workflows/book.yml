@@ -25,7 +25,7 @@ jobs:
           curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.37/mdbook-v0.4.37-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
 
       - name: Run mdBook
-        run: /bin/mdbook build
+        run: ../bin/mdbook build
         working-directory: spec
 
       - name: Setup Pages
