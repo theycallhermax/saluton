@@ -1,4 +1,5 @@
 name: Build mdBook
+
 on:
   push:
     branches:
@@ -17,15 +18,16 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v3
+
       - name: Install mdBook
         run: |
           mkdir bin
           curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.37/mdbook-v0.4.37-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
 
       - name: Run mdBook
-        run: |
-        cd spec
-        ./bin/mdbook build
+        run: /bin/mdbook build
+        working-directory: spec
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
@@ -33,6 +35,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'book'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
