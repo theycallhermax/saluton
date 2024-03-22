@@ -26,8 +26,7 @@ jobs:
 
       - name: Run mdBook
         run: |
-          ../bin/mdbook build
-          mv book spec
+          bin/mdbook build
         working-directory: spec
 
       - name: Setup Pages
@@ -35,9 +34,8 @@ jobs:
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        working-directory: spec
         with:
-          path: 'spec'
+          path: 'book'
 
       - name: Deploy to GitHub Pages
         id: deployment
