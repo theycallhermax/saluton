@@ -1,2 +1,2 @@
-# saluton
-👋 The next-generation × 2 chat platform
+# Saluton
+The next-generation × 2 chat platform
