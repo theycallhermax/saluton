@@ -7,3 +7,6 @@ multilingual = false
 
 [rust]
 edition = "2021"
+
+[output.html]
+site-url = "/saluton/spec/"
