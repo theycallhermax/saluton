@@ -22,12 +22,11 @@ jobs:
 
       - name: Install mdBook
         run: |
-          mkdir bin
-          curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.37/mdbook-v0.4.37-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
+          curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.37/mdbook-v0.4.37-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=spec
 
       - name: Run mdBook
         run: |
-          bin/mdbook build
+          ./mdbook build
         working-directory: spec
 
       - name: Setup Pages
